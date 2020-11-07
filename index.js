@@ -7,7 +7,7 @@ const app = express()
 app.set('view engine', 'pug')
 
 app.get('/', (request, response) => {
-  console.log(JSON.stringify(showdata.seasons.episodes))
+  // console.log(JSON.stringify(showdata.seasons))
 
   return response.render('index', { showdata })
 })

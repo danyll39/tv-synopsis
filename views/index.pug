@@ -5,6 +5,7 @@ html
             ul
                 each val in showdata.developedBy
                     li= val
+                   
             h2 Starring
             ul
                 each val in showdata.starring
@@ -12,7 +13,8 @@ html
             h2 Seasons
             ul
                 each val in showdata.seasons
-                    li= val       
+                    li
+                         a(href= `/seasons/${val.number}`)= 'Season' + (' ') + val.number
 
 
                    

@@ -1,12 +1,11 @@
 html
     body
-        h1 Seasons
-        h2= season.title
-        ul
-            for number in season.number
-                li= number
-
+        for episodes in seasonAll['episodes']
+            div= episodes['number'] 
+             div= episodes['title']
+              div= episodes['director']
+               div= episodes['synopsis']
+            
 
           
                 
-                 

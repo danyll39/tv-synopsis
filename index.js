@@ -7,9 +7,16 @@ const app = express()
 app.set('view engine', 'pug')
 
 app.get('/', (request, response) => {
-  // console.log(JSON.stringify(showdata.seasons))
+  console.log('lol')
 
   return response.render('index', { showdata })
+})
+
+app.get('/seasons/:id', (request, response) => {
+  // console.log(showdata.find((season) => season.id === parseInt(request.params.id)))
+  console.log(showdata.seasons[request.params.id - 1])
+
+  return response.render('seasons', {})
 })
 
 app.all('*', (request, response) => {

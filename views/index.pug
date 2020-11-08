@@ -3,18 +3,18 @@ html
         h1 Kim's Convenience
             h2 Developed By
             ul
-                each val in showdata.developedBy
-                    li= val
+               for developers in showdata.developedBy
+                    li= developers
                    
             h2 Starring
             ul
-                each val in showdata.starring
-                    li= val
+                for starringIn  in showdata.starring
+                    li= starringIn
             h2 Seasons
             ul
-                each val in showdata.seasons
+                each episode in showdata.seasons
                     li
-                         a(href= `/seasons/${val.number}`)= 'Season' + (' ') + val.number
+                         a(href= `/seasons/${episode.number}`)= 'Season' + (' ') + episode.number
 
 
                    

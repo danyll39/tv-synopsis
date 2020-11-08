@@ -1,11 +1,16 @@
 html
+    head
+        link(rel="stylesheet" href="/css/styles.css")
     body
-        for episodes in seasonAll['episodes']
-            div= episodes['number'] 
-             div= episodes['title']
-              div= episodes['director']
-               div= episodes['synopsis']
-            
+        h1 Kim's Convenience
+            h2= 'Season' + (' ') + seasonAll.number
+                h3
+                for episodes in seasonAll['episodes']
+                    div= episodes['number'] 
+                        div= episodes['title']
+                            div= episodes['director']
+                                div= episodes['synopsis']
+                
 
           
                 

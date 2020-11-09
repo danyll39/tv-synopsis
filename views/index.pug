@@ -1,28 +1,18 @@
 html 
     include partials/head.pug
     body 
+    div
         h1 Kim's Convenience
             h2 Developed By
             ul
                for developers in showdata.developedBy
-                    li= developers
-                   
+                    li(class='firstList')= developers     
             h2 Starring
             ul
                 for starringIn  in showdata.starring
-                    li= starringIn
+                    li(class=('firstList'))= starringIn
             h2 Seasons
             ul
                 each episode in showdata.seasons
-                    li
+                    li(class='firstList')
                          a(href= `/seasons/${episode.number}`)= 'Season' + (' ') + episode.number
-
-
-                   
-            
-
-
-          
-             
-  
-            

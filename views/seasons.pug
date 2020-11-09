@@ -4,12 +4,11 @@ html
         h1 Kim's Convenience
             h2= 'Season' + (' ') + seasonAll.number
                 h3
-                for episodes in seasonAll['episodes']
-                    div= episodes['number'] 
-                        div= episodes['title']
-                            div= episodes['director']
-                                div= episodes['synopsis']
+                    for episodes in seasonAll['episodes']
+                        div
+                            p= 'Episode:' + (' ') + episodes['number'] 
+                            p(class='p1')= 'Title:' + (' ') + episodes['title']
+                            p= 'Director:' + (' ') + episodes['director']
+                            p= 'Episode Info:' + (' ') + episodes['synopsis']
                 
 
-          
-                
